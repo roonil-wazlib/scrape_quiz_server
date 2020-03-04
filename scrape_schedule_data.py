@@ -34,7 +34,7 @@ def get_login_token(soup):
 def get_info(soup):
     info = []
     trs = soup.findAll("tr", {"class" : ""})
-    for person in trs[1:-2]:
+    for person in trs[1:-3]:
         item = person.text.split("\n")
         _id = item[1]
         time = get_minutes(item[3])
